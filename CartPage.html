@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CartPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+
+</head>
+<body>
+            <nav>
+            <header class="container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src= "/Users/dilyshuynh/Library/Group Containers/group.com.readdle.documents/MusicWidget/Documents/Web BootCamp/Image/logo1.png" alt="Beauté d'Amies Logo" class="logo-image">
+                    </div>
+                </div>
+                    <h1 class="brand-title">Beauté d'Amies</h1>
+                <div class="header-controls">
+                    <div class="search-box">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search">
+                    </div>
+                <div class="cart-icon">🛒</div>
+                <div class="menu-icon">☰</div>
+                </div>
+            </header>
+            </nav>
+
+    
+    
+    <div class="container">
+        <div class="cart-items">
+            <div class="filter-section">
+                <select class="filter-dropdown" id="filterDropdown">
+                    <option value="">⊞ Filtered by</option>
+                    <option value="product">Product name</option>
+                    <option value="color">Color</option>
+                    <option value="size">Size</option>
+                    <option value="quantity">Quantity</option>
+                    <option value="price">Price</option>
+                </select>
+
+                <div class="filter-options" id="filterOptions"></div>
+                
+            </div>
+            
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <input type="checkbox" class="checkbox" checked>
+                <img src="/Users/dilyshuynh/Library/Group Containers/group.com.readdle.documents/MusicWidget/Documents/Web BootCamp/Image/soap.png" alt="Bee Wax Soap" class="item-image">
+                <div class="item-details">
+                    <div class="item-info">
+                        <h3>Bee Wax Soap</h3>
+                    </div>
+                    <div class="item-quantity">Quantity</div>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                    <div class="item-price">Price<br>$40</div>
+                    <button class="delete-btn">🗑</button>
+                </div>
+            </div>
+            
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <input type="checkbox" class="checkbox" checked>
+                <img src="/Users/dilyshuynh/Library/Group Containers/group.com.readdle.documents/MusicWidget/Documents/Web BootCamp/Image/set.png" alt="Holiday's gift set" class="item-image">
+                <div class="item-details">
+                    <div class="item-info">
+                        <h3>Holiday's gift set</h3>
+                    </div>
+                    <div class="item-quantity">Quantity</div>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                    <div class="item-price">Price<br>$2000</div>
+                    <button class="delete-btn">🗑</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Receipt -->
+        <div class="receipt">
+            <div class="receipt-header">Receipt</div>
+            <button class="close-btn">✕</button>
+            
+            <table class="receipt-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/Users/dilyshuynh/Library/Group Containers/group.com.readdle.documents/MusicWidget/Documents/Web BootCamp/Image/soap.png" alt="Soap" class="receipt-item-image">
+                            <p class="receipt-product-name">Bee Wax Soap</p>
+                        </td>
+                        <td>1</td>
+                        <td>$40</td>
+                    </tr>
+                  
+                    <tr>
+                        <td>
+                            <img src="/Users/dilyshuynh/Library/Group Containers/group.com.readdle.documents/MusicWidget/Documents/Web BootCamp/Image/set.png" alt="Gift Set" class="receipt-item-image">
+                            <p class="receipt-product-name">Holiday's Gift Set</p>
+                        </td>
+                        <td>10</td>
+                        <td>$2000</td>
+                    </tr>
+
+                    <tr class="receipt-total-row">
+                        <td>Total</td>
+                        <td>11</td>
+                        <td>$2040</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <button class="confirm-btn">Confirm</button>
+        </div>
+    </div>
+    
+    <div class="about-section">
+        <h2>About us</h2>
+        <p> chi Tu - sID</p>
+        <p> Thanh Dung Huynh - s3938224 </p>
+        <p> Elly - sID</p>
+        <p> Hanh - sID</p>
+    </div>
+</body>
+</html>

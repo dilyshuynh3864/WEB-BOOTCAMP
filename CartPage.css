@@ -1,0 +1,366 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Avenir', sans-serif;
+    background-color: #f5f5f5;
+}
+
+nav {
+    background-color: #d4a5a5;
+}
+ 
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header.container {
+    padding: 1px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.brand-title {
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    color: #333;
+    flex: 1;
+    text-align: center;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-box {
+    background: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+.cart-icon, .menu-icon {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background 0.3s;
+}
+
+.cart-icon:hover, .menu-icon:hover {
+    background: #e8d4d4;
+}
+
+/* Container & Layout */
+.container {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart-items {
+    flex: 1;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    width: 160px;
+}
+
+.filter-dropdown {
+    background: #d4a5a5;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: background 0.3s;
+}
+
+.filter-dropdown:hover {
+    background: #c99999;
+}
+
+.filter-dropdown:focus {
+    outline: none;
+    background: #c99999;
+}
+
+.filter-options {
+    background: #e8d4d4;
+    border: 2px solid #d4a5a5;
+    border-radius: 8px;
+    padding: 20px;
+    display: none;
+}
+
+.filter-options.show {
+    display: block;
+}
+
+/* Cart Item Styles */
+.cart-item {
+    background: #e8d4d4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.item-image {
+    width: 120px;
+    height: 120px;
+    background: #ccc;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 150px 150px 50px;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.item-quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.item-quantity label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.quantity-input {
+    padding: 8px 12px;
+    border: 2px solid #d4a5a5;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.quantity-input:focus {
+    outline: none;
+    border-color: #c97070;
+    background-color: #fff9f9;
+}
+
+.item-price {
+    font-size: 16px;
+    text-align: center;
+}
+
+.delete-btn {
+    background: #c97070;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #b85959;
+}
+
+/* Receipt Styles */
+.receipt {
+    width: 350px;
+    background: #e8d4d4;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.receipt-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #c97070;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: #b85959;
+}
+
+/* Receipt Table */
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.receipt-table th, .receipt-table td {
+    border: 2px solid #d4a5a5;
+    padding: 12px;
+    text-align: center;
+}
+
+.receipt-table th {
+    background: #d4a5a5;
+    font-weight: bold;
+}
+
+.receipt-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.receipt-product-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-top: 2px solid #d4a5a5;
+    padding-top: 10px;
+}
+
+.receipt-total-row {
+    background: #e8d4d4;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.confirm-btn {
+    width: 100%;
+    background: #c97070;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.confirm-btn:hover {
+    background: #b85959;
+}
+
+/* About Section */
+.about-section {
+    background: #d4a5a5;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.about-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .receipt {
+        width: 100%;
+    }
+    
+    .item-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .brand-title {
+        font-size: 32px;
+    }
+}
+
